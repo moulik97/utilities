@@ -1,0 +1,17 @@
+# install pymssql using "pip3 install pymssql"
+
+# importing pymssql
+import pymssql
+# importing pandas
+import pandas as pd
+
+# query should be a valid SQL query
+# The query result is returned as a pandas df
+def get_data(query):
+    connection = pymssql.connect(
+                        server='abc.xyz.com', 
+                        user='usern@me', 
+                        password='p@ssword', 
+                        database='DB_name')
+    data = pd.read_sql(query, connection)
+    return (data)
