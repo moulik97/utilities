@@ -61,7 +61,7 @@ def send_mail_html_adress(subject,df1,df2,toaddr):
 
     # Authentication 
     try :
-        s.login(fromaddr,"p@ssword") 
+        s.login(fromaddr,app_password) 
     except Exception as err:
         print("Authentication error detected")
 
